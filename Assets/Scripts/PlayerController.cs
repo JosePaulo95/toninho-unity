@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Stance playerStance;
     public TicksController refTicker;
     public PlayerInput refInput;
+    public Animator refAnim;
     public float step;
     // Start is called before the first frame update
     void Start()
@@ -27,18 +28,22 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.UpArrow)){
             input.x = 1;
             input.y = 1;
+            refAnim.SetTrigger("go");
         }
         if(Input.GetKeyDown(KeyCode.RightArrow)){
             input.x = 1;
             input.y = -1;
+            refAnim.SetTrigger("go");
         }
         if(Input.GetKeyDown(KeyCode.LeftArrow)){
             input.x = -1;
             input.y = 1;
+            refAnim.SetTrigger("go");
         }
         if(Input.GetKeyDown(KeyCode.DownArrow)){
             input.x = -1;
             input.y = -1;
+            refAnim.SetTrigger("go");
         }
 
         //Input.GetKeyDown(KeyCode.RightArrow)
