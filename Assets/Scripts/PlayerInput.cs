@@ -12,24 +12,23 @@ public class PlayerInput : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float inputx = Input.GetAxis("Horizontal");
         float inputy = Input.GetAxis("Vertical");
 
-        if(inputx > 0){
+        if(Input.GetKeyDown(KeyCode.RightArrow)){
             input.x = 1;
             input.y = 1;
         }
-        if(inputx < 0){
+        if(Input.GetKeyDown(KeyCode.LeftArrow)){
             input.x = -1;
             input.y = 1;
         }
-        if(inputy > 0){
+        if(Input.GetKeyDown(KeyCode.UpArrow)){
             input.x = 1;
             input.y = 1;
         }
-        if(inputy < 0){
+        if(Input.GetKeyDown(KeyCode.DownArrow)){
             input.x = -1;
             input.y = -1;
         }
@@ -40,7 +39,7 @@ public class PlayerInput : MonoBehaviour
     }
     public Vector2 popInput(){
         Vector2 aux = input;
-        clearInput();
+        //clearInput();
         return aux;
     }
     void clearInput (){

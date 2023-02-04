@@ -22,15 +22,30 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        Vector2 input = new Vector2(0,0);
+        if(Input.GetKeyDown(KeyCode.UpArrow)){
+            input.x = 1;
+            input.y = 1;
+        }
+        if(Input.GetKeyDown(KeyCode.RightArrow)){
+            input.x = 1;
+            input.y = -1;
+        }
+        if(Input.GetKeyDown(KeyCode.LeftArrow)){
+            input.x = -1;
+            input.y = 1;
+        }
+        if(Input.GetKeyDown(KeyCode.DownArrow)){
+            input.x = -1;
+            input.y = -1;
+        }
+
+        //Input.GetKeyDown(KeyCode.RightArrow)
+        transform.Translate(input.x*step, input.y*step, 0);
         
     }
     void Ticks () {
-        if(refInput.hasInput()){
-            Vector2 input = refInput.popInput();
-            transform.Translate(input.x*step, input.y*step, 0);
-            toggleInstance();
-        }
     }
     void toggleInstance(){
         if(playerStance == Stance.Vertical){
