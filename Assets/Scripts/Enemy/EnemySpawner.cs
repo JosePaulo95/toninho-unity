@@ -14,13 +14,16 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("Spawn", 0f, timeRespawEnemy);
+
     }
 
-    
     void Update()
     {
         
+    }
+
+    public void begin (){
+        InvokeRepeating("Spawn", 0f, 1.5f);
     }
 
     void Spawn(){
