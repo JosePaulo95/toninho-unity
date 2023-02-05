@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0416b2c841999468b013b7a53bda69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_interval: 2.5
+  move_interval: 3
   step: 1
 --- !u!61 &-9201562623116273477
 BoxCollider2D:

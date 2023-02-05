@@ -18,6 +18,7 @@ namespace Toninho
     {
         public enum DialogPanelType { LEFTPICTURE, RIGHTPICTURE }
         public List<DialogNode> dialogs;
+        public GameObject refEnemySpawner;
 
         [Header("Panel Types")]
         public DialogPanel panelLeftPicture;
@@ -57,6 +58,7 @@ namespace Toninho
             }
 
             this.gameObject.SetActive(false);
+            refEnemySpawner.GetComponent<EnemySpawner>().begin();
         }
 
         public DialogPanel LoadNode(DialogNode dialogNode)
