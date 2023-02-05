@@ -6,13 +6,18 @@ public class EnemySpawner : MonoBehaviour
 {
     public Vector3[] pos;
     public GameObject prefab;
-    // Start is called before the first frame update
+    public int amountEnemies = 10;
+    public float timeOfMovement = 3.0f;
+    private int enemies = 0;
+    private float timeRespawEnemy = 4f;
+    
+
     void Start()
     {
-        InvokeRepeating("Spawn", 0f, 2f);
+        InvokeRepeating("Spawn", 0f, timeRespawEnemy);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -24,5 +29,23 @@ public class EnemySpawner : MonoBehaviour
         GameObject instance = Instantiate(prefab, transform, false);
         instance.transform.localPosition = position;
         instance.transform.localRotation = rotation;
+        if(enemies < amountEnemies) 
+        {
+            enemies++;
+
+        } else {
+            enemies = 0;
+            if (timeOfMovement > 0.5f)
+            {
+                timeOfMovement -= 0.5f;
+            }
+            else {
+                if (timeOfMovement > 0.1)
+                {
+                    timeOfMovement -= 0.1f;
+                }
+            }
+            timeRespawEnemy -= 0.2f;
+        }
     }
 }
