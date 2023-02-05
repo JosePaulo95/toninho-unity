@@ -24,35 +24,36 @@ namespace Toninho
         bool m_isPlaying;
         Coroutine m_playCo;
 
-        void Awake()
-        {
-            m_tokenizedText = new List<string>();
-            m_text = GetComponent<TextMeshProUGUI>();
-        }
-
         void OnEnable()
         {
-            if (PlayOnEnable && m_configured)
+            Configure();
+
+            if (PlayOnEnable)
             {
                 m_playCo = StartCoroutine(PlayCo());
             }
         }
 
-        void Start()
+        void Configure()
         {
-            if (m_configured)
-                return;
+            if (!m_configured)
+            {
+                m_tokenizedText = new List<string>();
+                m_text = GetComponent<TextMeshProUGUI>();
 
-            m_originalText = m_text.text;
-            m_text.text = "";
+                m_originalText = m_text.text;
+                m_text.text = "";
 
-            Tokenize();
+                Tokenize();
 
-            m_configured = true;
+                m_configured = true;
+            }
         }
 
         public void SetText(string newText)
         {
+            Configure();
+
             m_originalText = newText;
 
             if (m_playCo != null)
