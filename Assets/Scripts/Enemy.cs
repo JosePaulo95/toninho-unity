@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.layer == 6)
         {
             Debug.Log("Teste");
-            player.AttackPlayer();
+            //player.AttackPlayer();
         }
     }
 
@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.layer == 6)
         {
             Debug.Log("Teste");
-            player.AttackPlayer();
+            //player.AttackPlayer();
         }
     }
 }
