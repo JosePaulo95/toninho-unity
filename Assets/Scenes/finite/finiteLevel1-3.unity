@@ -1506,6 +1506,10 @@ PrefabInstance:
       value: "N\xE3o vou permitir que voc\xEAs continuem a escravizar meu povo."
       objectReference: {fileID: 0}
     - target: {fileID: 7264749975791659671, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
+      propertyPath: dialogs.Array.data[0].picture
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e1cc1b6394ec14488a763587e33009f, type: 3}
+    - target: {fileID: 7264749975791659671, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
       propertyPath: dialogs.Array.data[2].picture
       value: 
       objectReference: {fileID: 21300000, guid: 3ea564242e20a9e458601679357da524, type: 3}

@@ -1493,6 +1493,14 @@ PrefabInstance:
       value: "Pega ele l\xE1 Betr\xE3o."
       objectReference: {fileID: 0}
     - target: {fileID: 7264749975791659671, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
+      propertyPath: dialogs.Array.data[0].picture
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e1cc1b6394ec14488a763587e33009f, type: 3}
+    - target: {fileID: 7264749975791659671, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
+      propertyPath: dialogs.Array.data[1].picture
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e1cc1b6394ec14488a763587e33009f, type: 3}
+    - target: {fileID: 7264749975791659671, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
       propertyPath: dialogs.Array.data[0].dialogType
       value: 1
       objectReference: {fileID: 0}
