@@ -1,6 +1,7 @@
 
 using System;
 using UnityEngine;
+using Toninho;
 
 public enum Stance {
     horizontal,
@@ -72,6 +73,7 @@ public class PlayerController : MonoBehaviour
     }
     void DestroyAux(){
         Destroy(aux);
+        GameEvent.Trigger("EnemyDeath");
     }
     public void triggersEnemyCollision(Collider2D refCollider, string code){
         if(input_is_enabled){

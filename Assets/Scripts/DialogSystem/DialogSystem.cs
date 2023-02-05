@@ -58,7 +58,8 @@ namespace Toninho
             }
 
             this.gameObject.SetActive(false);
-            refEnemySpawner.GetComponent<EnemySpawner>().begin();
+
+            GameEvent.Trigger("PodeSpawnar");
         }
 
         public DialogPanel LoadNode(DialogNode dialogNode)
