@@ -160,6 +160,8 @@ MonoBehaviour:
   - {x: 1.5, y: 3, z: 0}
   - {x: 2.5, y: 3, z: 0}
   prefab: {fileID: 2156048420181734426, guid: e541cb458c379984c97903ed3fc97313, type: 3}
+  amountEnemies: 5
+  timeOfMovement: 3
 --- !u!4 &156406551
 Transform:
   m_ObjectHideFlags: 0
@@ -1648,7 +1650,7 @@ MonoBehaviour:
   input_is_enabled: 1
 --- !u!95 &1940834089
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1665,7 +1667,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1940834090
 SpriteRenderer:
   m_ObjectHideFlags: 0
