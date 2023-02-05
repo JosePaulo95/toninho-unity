@@ -64,4 +64,9 @@ public class PlayerController : MonoBehaviour
     void readInstance () {
         //transform.rotation = new Vector3(, input.y*step, 0)
     }
+
+    public void AttackPlayer() 
+    {
+        Debug.Log("Teste");
+    }
 }
