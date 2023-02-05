@@ -27,25 +27,25 @@ public class PlayerController : MonoBehaviour
     {   
         Vector2 input = new Vector2(0,0);
         if(input_is_enabled){
-            if(Input.GetKeyDown(KeyCode.UpArrow)){
+            if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)){
                 input.x = 1;
                 input.y = 1;
                 refAnim.SetTrigger("go");
                 ToggleStance();
             }
-            if(Input.GetKeyDown(KeyCode.RightArrow)){
+            if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)){
                 input.x = 1;
                 input.y = -1;
                 refAnim.SetTrigger("go");
                 ToggleStance();
             }
-            if(Input.GetKeyDown(KeyCode.LeftArrow)){
+            if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)){
                 input.x = -1;
                 input.y = 1;
                 refAnim.SetTrigger("go");
                 ToggleStance();
             }
-            if(Input.GetKeyDown(KeyCode.DownArrow)){
+            if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)){
                 input.x = -1;
                 input.y = -1;
                 refAnim.SetTrigger("go");

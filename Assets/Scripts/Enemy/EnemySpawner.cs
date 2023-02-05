@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public Vector3[] pos;
-    public GameObject prefab;
+    public GameObject[] prefab;
     public int amountEnemies = 10;
     public float timeOfMovement = 3.0f;
     private int enemies = 0;
@@ -25,8 +25,9 @@ public class EnemySpawner : MonoBehaviour
 
     void Spawn(){
         Vector3 position = new Vector3(Random.Range(0, 6), 0, 0);
+        int enemyIndex = Random.Range(0, prefab.Length);
         Quaternion rotation = Quaternion.identity;
-        GameObject instance = Instantiate(prefab, transform, false);
+        GameObject instance = Instantiate(prefab[enemyIndex], transform, false);
         instance.transform.localPosition = position;
         instance.transform.localRotation = rotation;
         if(enemies < amountEnemies) 
@@ -38,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
             if (timeOfMovement > 0.5f)
             {
                 timeOfMovement -= 0.5f;
+                timeRespawEnemy -= 0.2f;
             }
             else {
                 if (timeOfMovement > 0.1)
@@ -45,7 +47,6 @@ public class EnemySpawner : MonoBehaviour
                     timeOfMovement -= 0.1f;
                 }
             }
-            timeRespawEnemy -= 0.2f;
         }
     }
 }
