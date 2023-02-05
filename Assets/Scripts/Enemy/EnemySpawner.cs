@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     void Spawn(){
-        Vector3 position = new Vector3(Random.Range(0, 7), 0, 0);
+        Vector3 position = new Vector3(Random.Range(0, 6), 0, 0);
         Quaternion rotation = Quaternion.identity;
         GameObject instance = Instantiate(prefab, transform, false);
         instance.transform.localPosition = position;
