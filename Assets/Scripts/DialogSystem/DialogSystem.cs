@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Toninho
 {
@@ -18,11 +19,13 @@ namespace Toninho
     {
         public enum DialogPanelType { LEFTPICTURE, RIGHTPICTURE }
         public List<DialogNode> dialogs;
-        public GameObject refEnemySpawner;
 
         [Header("Panel Types")]
         public DialogPanel panelLeftPicture;
         public DialogPanel panelRightPicture;
+
+        [Header("Events")]
+        public UnityEvent OnEndDialogue;
 
         private void OnEnable()
         {
@@ -60,6 +63,7 @@ namespace Toninho
             this.gameObject.SetActive(false);
 
             GameEvent.Trigger("PodeSpawnar");
+            OnEndDialogue?.Invoke();
         }
 
         public DialogPanel LoadNode(DialogNode dialogNode)

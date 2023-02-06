@@ -8,7 +8,7 @@ using Toninho;
 public class FiniteEnemySpawner : MonoBehaviour, EventListener<GameEvent>
 {
     public Vector3[] pos;
-    public GameObject prefab;
+    public GameObject[] prefab;
     public float interval = 3.0f;
     public int instantiated_enemies = 0, dead_enemies = 0, max_enemies;
     public float enemy_speed;
@@ -29,10 +29,11 @@ public class FiniteEnemySpawner : MonoBehaviour, EventListener<GameEvent>
     }
 
     void Spawn(){
+        int enemyIndex = Random.Range(0, prefab.Length);
         if(instantiated_enemies < max_enemies){
             Vector3 position = pos[Random.Range(0, pos.Length)];
             Quaternion rotation = Quaternion.identity;
-            GameObject instance = Instantiate(prefab, transform, false);
+            GameObject instance = Instantiate(prefab[enemyIndex], transform, false);
             instance.transform.localPosition = position;
             instance.transform.localRotation = rotation;
 
