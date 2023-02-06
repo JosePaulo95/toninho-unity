@@ -1482,6 +1482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7264749975791659670, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7264749975791659671, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
       propertyPath: refEnemySpawner
       value: 
