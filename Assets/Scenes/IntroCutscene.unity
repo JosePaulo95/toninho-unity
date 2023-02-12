@@ -1537,6 +1537,10 @@ PrefabInstance:
       propertyPath: OnEndDialogue.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7264749975791659673, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7264749975791659675, guid: 1398984733ac56f4e88acffe11caf4ef, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2180,7 +2184,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 1
-  m_AspectRatio: 2
+  m_AspectRatio: 3
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
